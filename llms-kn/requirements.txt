@@ -5,3 +5,14 @@ PyPDF2
 faiss-cpu
 tiktoken
 chromadb
+transformers
+einops
+accelerate
+bitsandbytes
+sentence_transformers
+llama_index
+llama-index-llms-huggingface
+google-generativeai
+python-dotenv
+langchain_google_genai
+python-dotenv
