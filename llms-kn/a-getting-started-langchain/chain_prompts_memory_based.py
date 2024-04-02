@@ -16,8 +16,8 @@ st.title("Celebrity Search Results")
 input_text = st.text_input("Search with Openai")
 
 # memory
-person_memory = ConversationBufferMemory(input_key='name', memory_key= 'chat_history')
-dob_memory = ConversationBufferMemory(input_key='person', memory_key= 'chat_history')
+person_memory = ConversationBufferMemory(input_key="name", memory_key="chat_history")
+dob_memory = ConversationBufferMemory(input_key="person", memory_key="chat_history")
 
 # OpenAI LLM
 llm = OpenAI(temperature=0.8)
@@ -27,13 +27,23 @@ first_input_prompt = PromptTemplate(
 )
 
 chain_1 = LLMChain(
-    llm=llm, prompt=first_input_prompt, verbose=True, output_key="person", memory = person_memory
+    llm=llm,
+    prompt=first_input_prompt,
+    verbose=True,
+    output_key="person",
+    memory=person_memory,
 )
 
 second_input_prompt = PromptTemplate(
     input_variables=["person"], template="When was {person} born"
 )
-chain_2 = LLMChain(llm=llm, prompt=second_input_prompt, verbose=True, output_key="dob", memory = dob_memory)
+chain_2 = LLMChain(
+    llm=llm,
+    prompt=second_input_prompt,
+    verbose=True,
+    output_key="dob",
+    memory=dob_memory,
+)
 
 parent_chain = SequentialChain(
     chains=[chain_1, chain_2],
@@ -46,7 +56,5 @@ if input_text:
     pred = parent_chain({"name": input_text})
     st.write(pred)
 
-    with st.expander('Person name'):
+    with st.expander("Person name"):
         st.info(person_memory.buffer)
-
- 

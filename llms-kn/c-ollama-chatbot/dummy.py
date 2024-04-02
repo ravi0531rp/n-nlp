@@ -1,7 +1,9 @@
 import streamlit as st
 
+
 def reverse_string(text):
     return text[::-1]
+
 
 # Initialize Streamlit app
 st.title("Simple Chatbot")
