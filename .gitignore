@@ -1,5 +1,5 @@
 llms-kn/secret.json
-
+llms-kn/e-gemini-faiss-langchain-rag/g_api.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
