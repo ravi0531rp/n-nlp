@@ -17,3 +17,5 @@ python-dotenv
 langchain_google_genai
 python-dotenv
 langchain-community
+sse_starlette
+langserve
