@@ -10,3 +10,7 @@ PDF -> Read ->  TEXT CHUNK -> TEXT EMBEDDINGS -> VECTOR DB (ASTRA & DATASTAX) <-
                 TEXT CHUNK -> TEXT EMBEDDINGS          
 
 ```
+
+* As you can see, we have two notebooks. One for OpenAI and One for Gemini. 
+* The first one uses OpenAI as LLM as well as for Embeddings.
+* The second one uses Gemini for LLM as well as for Embeddings.
