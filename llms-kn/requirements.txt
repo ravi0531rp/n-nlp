@@ -22,3 +22,5 @@ langserve
 cassio
 datasets
 matplotlib
+keras-nlp
+keras>=3
